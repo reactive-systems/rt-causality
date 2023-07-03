@@ -1,0 +1,9 @@
+But-For Causes:  
+
+Delay cause: {(nhi_1!, 1)}
+Delay cause: {(hi_2!, 2), (hi_2!, 4)}
+Delay cause: {(hi_2!, 2), (nhi_1!, 3)}
+
+Actual Causes:
+Delay cause: {(nhi_1!, 1)}
+Delay cause: {(hi_2!, 2)}

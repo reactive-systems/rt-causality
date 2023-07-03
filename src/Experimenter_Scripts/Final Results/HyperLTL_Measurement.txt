@@ -1,0 +1,7 @@
+Runtime Results HyperLTL, Sample Size: 5
+
+But-For Cause Checking, Runtime: 0.1904468059539795
+Minimal But-For Cause Checking, Runtime: 0.3674874782562256
+Actual Cause Checking, Runtime: 0.18180494308471679
+But-For Cause Computation, Runtime: 124.10173788070679
+Actual Cause Computation, Runtime: 582.5050320625305

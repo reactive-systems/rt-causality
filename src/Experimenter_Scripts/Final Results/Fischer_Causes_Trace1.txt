@@ -1,0 +1,9 @@
+But-For Causes:
+Delay cause: {(1, 1), (8, 3), (tau_1!, 2), (tau_1!, 3)}
+Delay cause: {(tau_1!, 1), (tau_1!, 2), (tau_1!, 3)}
+Delay cause: {(1, 1), (8, 3), (tau_1!, 1), (tau_1!, 4)}
+
+Actual Causes: 
+Delay cause: {(1, 1), (8, 3), (tau_1!, 2), (tau_1!, 3)}
+Delay cause: {(tau_1!, 1), (tau_1!, 2), (tau_1!, 3)}
+Delay cause: {(1, 1), (8, 3), (tau_1!, 1), (tau_1!, 4)}

@@ -1,0 +1,9 @@
+Runtime Results Fischer, Trace 1
+
+But-For Cause3 Checking, Runtime: 0.17410171031951904
+Min But-For Cause 3 Checking, Runtime: 0.4563140869140625
+Min But-For Cause 4 Checking, Runtime: 0.5446401834487915
+Actual Cause 3 Checking, Runtime: 1.7591335773468018
+Actual Cause 4 Checking, Runtime: 1.621507716178894
+But-For Cause Computation, Runtime: 18.964835238456725
+Actual Cause Computation, Runtime: 66.94145112037658
