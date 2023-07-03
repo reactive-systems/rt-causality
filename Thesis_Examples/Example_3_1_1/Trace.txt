@@ -1,0 +1,3 @@
+// Delay Trace of the Entry Example
+
+Delay trace: <3, a!> <2, a!>
