@@ -1,0 +1,1 @@
+Delay trace: <3, sow!> <3, fertilize!> <1, water!> <2, harvest!>

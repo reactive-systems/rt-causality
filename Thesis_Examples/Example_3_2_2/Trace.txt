@@ -1,0 +1,1 @@
+Timestamp trace: <3, sow!> <6, fertilize!> <7, water!> <9, harvest!>

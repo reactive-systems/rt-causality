@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE nta PUBLIC '-//Uppaal Team//DTD Flat System 1.1//EN' 'http://www.it.uu.se/research/group/darts/uppaal/flat-1_2.dtd'>
+<nta>
+	<declaration>// Place global declarations here.
+
+chan tau_1, tau_2;
+clock x;</declaration>
+	<template>
+		<name x="5" y="5">Template</name>
+		<declaration>// Place local declarations here.</declaration>
+		<location id="id0" x="0" y="0">
+			<name x="-34" y="-42">A_A_0</name>
+		</location>
+		<location id="id1" x="0" y="170">
+			<name x="-76" y="161">req_A_0</name>
+			<label kind="invariant" x="17" y="170">x &lt;= 4</label>
+		</location>
+		<location id="id2" x="-25" y="365">
+			<name x="-17" y="365">wait_A_1</name>
+		</location>
+		<location id="id3" x="0" y="510">
+			<name x="-17" y="527">cs_A_1</name>
+		</location>
+		<location id="id4" x="170" y="0">
+			<name x="153" y="-42">A_req_0</name>
+			<label kind="invariant" x="187" y="8">x &lt;= 4</label>
+		</location>
+		<location id="id5" x="365" y="-25">
+			<name x="355" y="-59">A_wait_2</name>
+		</location>
+		<location id="id6" x="510" y="0">
+			<name x="527" y="-17">A_cs_2</name>
+		</location>
+		<location id="id7" x="25" y="314">
+			<name x="0" y="323">wait_A_0</name>
+		</location>
+		<location id="id8" x="314" y="25">
+			<name x="289" y="-8">A_wait_0</name>
+		</location>
+		<location id="id9" x="170" y="170">
+			<name x="144" y="178">req_req_0</name>
+			<label kind="invariant" x="187" y="144">x &lt;= 4</label>
+		</location>
+		<location id="id10" x="195" y="314">
+			<name x="203" y="288">wait_req_1</name>
+			<label kind="invariant" x="178" y="331">x &lt;= 4</label>
+		</location>
+		<location id="id11" x="314" y="195">
+			<name x="246" y="204">req_wait_2</name>
+			<label kind="invariant" x="331" y="195">x &lt;= 4</label>
+		</location>
+		<location id="id12" x="170" y="510">
+			<name x="178" y="476">cs_req_1</name>
+			<label kind="invariant" x="153" y="527">x &lt;= 4</label>
+		</location>
+		<location id="id13" x="510" y="170">
+			<name x="500" y="136">req_cs_2</name>
+			<label kind="invariant" x="527" y="161">x &lt;= 4</label>
+		</location>
+		<location id="id14" x="314" y="365">
+			<name x="280" y="382">wait_wait_2</name>
+		</location>
+		<location id="id15" x="365" y="314">
+			<name x="382" y="297">wait_wait_1</name>
+		</location>
+		<location id="id16" x="510" y="340">
+			<name x="535" y="331">wait_cs_2</name>
+		</location>
+		<location id="id17" x="340" y="510">
+			<name x="314" y="527">cs_wait_1</name>
+		</location>
+		<location id="id18" x="510" y="510">
+			<name x="518" y="518">cs_cs</name>
+		</location>
+		<location id="id19" x="144" y="365">
+			<name x="119" y="374">wait_req_0</name>
+			<label kind="invariant" x="127" y="391">x &lt;= 4</label>
+		</location>
+		<location id="id20" x="365" y="144">
+			<name x="340" y="119">req_wait_0</name>
+			<label kind="invariant" x="348" y="153">x &lt;= 4</label>
+		</location>
+		<init ref="id0"/>
+		<transition>
+			<source ref="id20"/>
+			<target ref="id15"/>
+			<label kind="synchronisation" x="416" y="212">tau_1!</label>
+			<label kind="assignment" x="416" y="229">x := 0</label>
+			<nail x="416" y="238"/>
+		</transition>
+		<transition>
+			<source ref="id19"/>
+			<target ref="id14"/>
+			<label kind="synchronisation" x="195" y="348">tau_2!</label>
+			<label kind="assignment" x="195" y="365">x := 0</label>
+		</transition>
+		<transition>
+			<source ref="id20"/>
+			<target ref="id9"/>
+			<label kind="synchronisation" x="280" y="127">tau_2!</label>
+			<label kind="assignment" x="289" y="153">x := 0</label>
+		</transition>
+		<transition>
+			<source ref="id19"/>
+			<target ref="id9"/>
+			<label kind="synchronisation" x="119" y="229">tau_1!</label>
+			<label kind="assignment" x="119" y="246">x := 0</label>
+		</transition>
+		<transition>
+			<source ref="id8"/>
+			<target ref="id20"/>
+			<label kind="synchronisation" x="340" y="51">tau_1!</label>
+			<label kind="assignment" x="348" y="68">x := 0</label>
+		</transition>
+		<transition>
+			<source ref="id7"/>
+			<target ref="id19"/>
+			<label kind="synchronisation" x="68" y="314">tau_2!</label>
+			<label kind="assignment" x="68" y="340">x := 0</label>
+		</transition>
+		<transition>
+			<source ref="id8"/>
+			<target ref="id4"/>
+			<label kind="synchronisation" x="238" y="17">tau_2!</label>
+			<label kind="assignment" x="238" y="34">x := 0</label>
+		</transition>
+		<transition>
+			<source ref="id17"/>
+			<target ref="id8"/>
+			<label kind="synchronisation" x="255" y="459">tau_1!</label>
+			<nail x="272" y="442"/>
+			<nail x="272" y="68"/>
+		</transition>
+		<transition>
+			<source ref="id7"/>
+			<target ref="id1"/>
+			<label kind="synchronisation" x="17" y="221">tau_1!</label>
+			<label kind="assignment" x="25" y="238">x := 0</label>
+		</transition>
+		<transition>
+			<source ref="id16"/>
+			<target ref="id7"/>
+			<label kind="synchronisation" x="459" y="246">tau_2!</label>
+			<nail x="476" y="272"/>
+			<nail x="68" y="272"/>
+		</transition>
+		<transition>
+			<source ref="id14"/>
+			<target ref="id16"/>
+			<label kind="guard" x="416" y="348">x &gt;= 8</label>
+			<label kind="synchronisation" x="416" y="365">tau_2!</label>
+		</transition>
+		<transition>
+			<source ref="id15"/>
+			<target ref="id17"/>
+			<label kind="guard" x="357" y="442">x &gt;= 8</label>
+			<label kind="synchronisation" x="357" y="459">tau_1!</label>
+		</transition>
+		<transition>
+			<source ref="id13"/>
+			<target ref="id1"/>
+			<label kind="synchronisation" x="450" y="102">tau_2!</label>
+			<nail x="459" y="119"/>
+			<nail x="51" y="119"/>
+		</transition>
+		<transition>
+			<source ref="id12"/>
+			<target ref="id4"/>
+			<label kind="synchronisation" x="85" y="467">tau_1!</label>
+			<nail x="110" y="450"/>
+			<nail x="110" y="59"/>
+		</transition>
+		<transition>
+			<source ref="id11"/>
+			<target ref="id13"/>
+			<label kind="guard" x="425" y="136">x &gt;= 8</label>
+			<label kind="synchronisation" x="425" y="153">tau_2!</label>
+		</transition>
+		<transition>
+			<source ref="id11"/>
+			<target ref="id15"/>
+			<label kind="synchronisation" x="340" y="221">tau_1!</label>
+			<label kind="assignment" x="340" y="238">x := 0</label>
+		</transition>
+		<transition>
+			<source ref="id10"/>
+			<target ref="id14"/>
+			<label kind="synchronisation" x="255" y="323">tau_2!</label>
+			<label kind="assignment" x="255" y="348">x := 0</label>
+		</transition>
+		<transition>
+			<source ref="id10"/>
+			<target ref="id12"/>
+			<label kind="guard" x="187" y="408">x &gt;= 8</label>
+			<label kind="synchronisation" x="187" y="425">tau_1!</label>
+		</transition>
+		<transition>
+			<source ref="id9"/>
+			<target ref="id11"/>
+			<label kind="synchronisation" x="221" y="178">tau_2!</label>
+			<label kind="assignment" x="212" y="195">x := 0</label>
+		</transition>
+		<transition>
+			<source ref="id9"/>
+			<target ref="id10"/>
+			<label kind="synchronisation" x="187" y="221">tau_1!</label>
+			<label kind="assignment" x="187" y="238">x := 0</label>
+		</transition>
+		<transition>
+			<source ref="id4"/>
+			<target ref="id9"/>
+			<label kind="synchronisation" x="127" y="85">tau_1!</label>
+			<label kind="assignment" x="127" y="102">x := 0</label>
+		</transition>
+		<transition>
+			<source ref="id1"/>
+			<target ref="id9"/>
+			<label kind="synchronisation" x="68" y="136">tau_2!</label>
+			<label kind="assignment" x="68" y="153">x := 0</label>
+		</transition>
+		<transition>
+			<source ref="id6"/>
+			<target ref="id0"/>
+			<label kind="synchronisation" x="255" y="-161">tau_2!</label>
+			<nail x="476" y="-136"/>
+			<nail x="68" y="-136"/>
+		</transition>
+		<transition>
+			<source ref="id3"/>
+			<target ref="id0"/>
+			<label kind="synchronisation" x="-170" y="212">tau_1!</label>
+			<nail x="-111" y="437"/>
+			<nail x="-111" y="46"/>
+		</transition>
+		<transition>
+			<source ref="id5"/>
+			<target ref="id6"/>
+			<label kind="guard" x="433" y="-51">x &gt;= 8</label>
+			<label kind="synchronisation" x="433" y="-34">tau_2!</label>
+		</transition>
+		<transition>
+			<source ref="id4"/>
+			<target ref="id5"/>
+			<label kind="synchronisation" x="246" y="-59">tau_2!</label>
+			<label kind="assignment" x="246" y="-42">x := 0</label>
+		</transition>
+		<transition>
+			<source ref="id0"/>
+			<target ref="id4"/>
+			<label kind="synchronisation" x="59" y="-42">tau_2!</label>
+			<label kind="assignment" x="59" y="-25">x := 0</label>
+		</transition>
+		<transition>
+			<source ref="id2"/>
+			<target ref="id3"/>
+			<label kind="guard" x="-59" y="416">x &gt;= 8</label>
+			<label kind="synchronisation" x="-59" y="433">tau_1!</label>
+		</transition>
+		<transition>
+			<source ref="id1"/>
+			<target ref="id2"/>
+			<label kind="synchronisation" x="-59" y="246">tau_1!</label>
+			<label kind="assignment" x="-59" y="263">x := 0</label>
+		</transition>
+		<transition>
+			<source ref="id0"/>
+			<target ref="id1"/>
+			<label kind="synchronisation" x="8" y="68">tau_1!</label>
+			<label kind="assignment" x="8" y="85">x := 0</label>
+		</transition>
+	</template>
+	<template>
+		<name>Dummy_Handshaker</name>
+		<location id="id21" x="0" y="0">
+		</location>
+		<init ref="id21"/>
+		<transition>
+			<source ref="id21"/>
+			<target ref="id21"/>
+			<label kind="synchronisation" x="51" y="-17">tau_2?</label>
+			<nail x="42" y="8"/>
+			<nail x="42" y="-17"/>
+		</transition>
+		<transition>
+			<source ref="id21"/>
+			<target ref="id21"/>
+			<label kind="synchronisation" x="-17" y="-59">tau_1?</label>
+			<nail x="-30" y="-30"/>
+			<nail x="30" y="-30"/>
+		</transition>
+	</template>
+	<system>// Place template instantiations here.
+Proc_Template = Template();
+Proc_Dummy_Handshaker = Dummy_Handshaker();
+// List one or more processes to be composed into a system.
+system Proc_Template, Proc_Dummy_Handshaker;
+    </system>
+	<queries>
+		<query>
+			<formula>A&lt;&gt; (Proc_Template.A_cs_2 or Proc_Template.req_cs_2 or Proc_Template.wait_cs_2)</formula>
+			<comment></comment>
+		</query>
+	</queries>
+</nta>

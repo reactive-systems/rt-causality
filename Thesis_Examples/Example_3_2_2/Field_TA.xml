@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE nta PUBLIC '-//Uppaal Team//DTD Flat System 1.1//EN' 'http://www.it.uu.se/research/group/darts/uppaal/flat-1_2.dtd'>
+<nta>
+	<declaration>// Place global declarations here.
+clock m;
+chan sow, fertilize, water, harvest;</declaration>
+	<template>
+		<name>Template</name>
+		<declaration>// Place local declarations here.</declaration>
+		<location id="id0" x="-612" y="-238">
+			<label kind="invariant" x="-654" y="-297">m &lt;= 4</label>
+		</location>
+		<location id="id1" x="-510" y="-238">
+			<label kind="invariant" x="-518" y="-306">m &lt;= 12</label>
+		</location>
+		<location id="id2" x="-408" y="-238">
+			<label kind="invariant" x="-425" y="-306">m &lt;= 12</label>
+		</location>
+		<location id="id3" x="-306" y="-238">
+			<label kind="invariant" x="-331" y="-306">m &lt;= 12</label>
+		</location>
+		<location id="id4" x="-204" y="-238">
+			<name x="-229" y="-289">succ</name>
+		</location>
+		<location id="id5" x="-306" y="-68">
+			<name x="-323" y="-25">fail</name>
+		</location>
+		<init ref="id0"/>
+		<transition>
+			<source ref="id3"/>
+			<target ref="id5"/>
+			<label kind="guard" x="-255" y="-136">m &gt; 9</label>
+			<label kind="synchronisation" x="-272" y="-119">harvest!</label>
+			<nail x="-263" y="-144"/>
+		</transition>
+		<transition>
+			<source ref="id3"/>
+			<target ref="id5"/>
+			<label kind="guard" x="-306" y="-144">m &lt; 9</label>
+			<label kind="synchronisation" x="-314" y="-161">harvest!</label>
+			<nail x="-280" y="-153"/>
+		</transition>
+		<transition>
+			<source ref="id3"/>
+			<target ref="id5"/>
+			<label kind="synchronisation" x="-318" y="-212">sow!</label>
+			<nail x="-331" y="-153"/>
+		</transition>
+		<transition>
+			<source ref="id3"/>
+			<target ref="id5"/>
+			<label kind="synchronisation" x="-310" y="-216">water!</label>
+			<nail x="-314" y="-161"/>
+		</transition>
+		<transition>
+			<source ref="id3"/>
+			<target ref="id5"/>
+			<label kind="synchronisation" x="-314" y="-216">fertilize!</label>
+			<nail x="-323" y="-161"/>
+		</transition>
+		<transition>
+			<source ref="id2"/>
+			<target ref="id5"/>
+			<label kind="guard" x="-390" y="-229">m &gt; 7</label>
+			<label kind="synchronisation" x="-390" y="-212">water!</label>
+			<nail x="-340" y="-153"/>
+		</transition>
+		<transition>
+			<source ref="id2"/>
+			<target ref="id5"/>
+			<label kind="synchronisation" x="-364" y="-123">sow!</label>
+			<nail x="-382" y="-144"/>
+		</transition>
+		<transition>
+			<source ref="id2"/>
+			<target ref="id5"/>
+			<label kind="synchronisation" x="-364" y="-127">fertilize!</label>
+			<nail x="-382" y="-153"/>
+			<nail x="-382" y="-153"/>
+		</transition>
+		<transition>
+			<source ref="id2"/>
+			<target ref="id5"/>
+			<label kind="synchronisation" x="-364" y="-131">harvest!</label>
+			<nail x="-382" y="-161"/>
+		</transition>
+		<transition>
+			<source ref="id1"/>
+			<target ref="id5"/>
+			<label kind="guard" x="-432" y="-144">m &lt; 4</label>
+			<label kind="synchronisation" x="-432" y="-127">fertilize!</label>
+			<nail x="-450" y="-153"/>
+		</transition>
+		<transition>
+			<source ref="id1"/>
+			<target ref="id5"/>
+			<label kind="synchronisation" x="-466" y="-119">harvest!</label>
+			<nail x="-484" y="-136"/>
+		</transition>
+		<transition>
+			<source ref="id1"/>
+			<target ref="id5"/>
+			<label kind="synchronisation" x="-466" y="-123">water!</label>
+			<nail x="-484" y="-144"/>
+			<nail x="-484" y="-144"/>
+		</transition>
+		<transition>
+			<source ref="id1"/>
+			<target ref="id5"/>
+			<label kind="synchronisation" x="-466" y="-127">sow!</label>
+			<nail x="-484" y="-153"/>
+		</transition>
+		<transition>
+			<source ref="id0"/>
+			<target ref="id5"/>
+			<label kind="guard" x="-569" y="-212">m &gt; 3</label>
+			<label kind="synchronisation" x="-561" y="-204">sow!</label>
+			<nail x="-501" y="-136"/>
+		</transition>
+		<transition>
+			<source ref="id0"/>
+			<target ref="id5"/>
+			<label kind="guard" x="-493" y="-110">m &lt; 3</label>
+			<label kind="synchronisation" x="-518" y="-119">sow!</label>
+			<nail x="-510" y="-127"/>
+		</transition>
+		<transition>
+			<source ref="id0"/>
+			<target ref="id5"/>
+			<label kind="synchronisation" x="-594" y="-182">harvest!</label>
+			<nail x="-535" y="-93"/>
+		</transition>
+		<transition>
+			<source ref="id0"/>
+			<target ref="id5"/>
+			<label kind="synchronisation" x="-594" y="-178">water!</label>
+			<nail x="-535" y="-85"/>
+		</transition>
+		<transition>
+			<source ref="id0"/>
+			<target ref="id5"/>
+			<label kind="synchronisation" x="-603" y="-161">fertilize!</label>
+			<nail x="-536" y="-89"/>
+		</transition>
+		<transition>
+			<source ref="id5"/>
+			<target ref="id5"/>
+			<label kind="synchronisation" x="-294" y="-81">harvest!</label>
+			<nail x="-272" y="-85"/>
+			<nail x="-289" y="-93"/>
+		</transition>
+		<transition>
+			<source ref="id5"/>
+			<target ref="id5"/>
+			<label kind="synchronisation" x="-294" y="-64">water!</label>
+			<nail x="-272" y="-51"/>
+			<nail x="-272" y="-76"/>
+		</transition>
+		<transition>
+			<source ref="id5"/>
+			<target ref="id5"/>
+			<label kind="synchronisation" x="-294" y="-60">fertilize!</label>
+			<nail x="-297" y="-34"/>
+			<nail x="-280" y="-42"/>
+		</transition>
+		<transition>
+			<source ref="id5"/>
+			<target ref="id5"/>
+			<label kind="synchronisation" x="-319" y="-60">sow!</label>
+			<nail x="-331" y="-42"/>
+			<nail x="-306" y="-34"/>
+		</transition>
+		<transition>
+			<source ref="id4"/>
+			<target ref="id4"/>
+			<label kind="synchronisation" x="-192" y="-255">harvest!</label>
+			<nail x="-187" y="-263"/>
+			<nail x="-212" y="-263"/>
+		</transition>
+		<transition>
+			<source ref="id4"/>
+			<target ref="id4"/>
+			<label kind="synchronisation" x="-192" y="-243">water!</label>
+			<nail x="-161" y="-238"/>
+			<nail x="-170" y="-255"/>
+		</transition>
+		<transition>
+			<source ref="id4"/>
+			<target ref="id4"/>
+			<label kind="synchronisation" x="-192" y="-234">fertilize!</label>
+			<nail x="-187" y="-212"/>
+			<nail x="-170" y="-221"/>
+		</transition>
+		<transition>
+			<source ref="id4"/>
+			<target ref="id4"/>
+			<label kind="synchronisation" x="-217" y="-230">sow!</label>
+			<nail x="-229" y="-212"/>
+			<nail x="-204" y="-204"/>
+		</transition>
+		<transition>
+			<source ref="id2"/>
+			<target ref="id5"/>
+			<label kind="guard" x="-390" y="-187">m &lt; 7</label>
+			<label kind="synchronisation" x="-390" y="-170">water!</label>
+		</transition>
+		<transition>
+			<source ref="id1"/>
+			<target ref="id5"/>
+			<label kind="guard" x="-492" y="-187">m &gt; 4</label>
+			<label kind="synchronisation" x="-492" y="-170">fertilize!</label>
+		</transition>
+		<transition>
+			<source ref="id3"/>
+			<target ref="id4"/>
+			<label kind="guard" x="-288" y="-272">m == 9</label>
+			<label kind="synchronisation" x="-288" y="-255">harvest!</label>
+		</transition>
+		<transition>
+			<source ref="id2"/>
+			<target ref="id3"/>
+			<label kind="guard" x="-390" y="-272">m == 7</label>
+			<label kind="synchronisation" x="-390" y="-255">water!</label>
+		</transition>
+		<transition>
+			<source ref="id1"/>
+			<target ref="id2"/>
+			<label kind="guard" x="-492" y="-272">m == 4</label>
+			<label kind="synchronisation" x="-492" y="-255">fertilize!</label>
+		</transition>
+		<transition>
+			<source ref="id0"/>
+			<target ref="id1"/>
+			<label kind="guard" x="-594" y="-272">m == 3</label>
+			<label kind="synchronisation" x="-578" y="-255">sow!</label>
+		</transition>
+	</template>
+	<system>// Place template instantiations here.
+Proc_Template = Template();
+// List one or more processes to be composed into a system.
+system Proc_Template;
+    </system>
+	<queries>
+		<query>
+			<formula>A[] not Proc_Template.fail</formula>
+			<comment></comment>
+		</query>
+	</queries>
+</nta>

@@ -1,0 +1,5 @@
+// Delay Trace of the Lasso Example
+
+Lasso delay trace: 
+Prefix part: <1, tau_2!>
+Lasso part: <1, tau_1!><1, tau_1!><8, tau_1!> <1, tau_1!>

@@ -1,0 +1,3 @@
+// Delay Trace of the Entry Example
+
+Delay trace: <1, nhi1!> <1, hi2!> <1, nhi1!> <1, hi2!> <1, nhi1!> <1, nhi2!>

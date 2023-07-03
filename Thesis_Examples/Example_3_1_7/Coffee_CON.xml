@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE nta PUBLIC '-//Uppaal Team//DTD Flat System 1.1//EN' 'http://www.it.uu.se/research/group/darts/uppaal/flat-1_2.dtd'>
+<nta>
+	<declaration>clock x;
+
+chan push, wait;</declaration>
+	<template>
+		<name>Template_CON</name>
+		<declaration>// Place local declarations here.</declaration>
+		<location id="id0" x="-374" y="-119">
+		</location>
+		<location id="id1" x="-238" y="-119">
+			<label kind="invariant" x="-238" y="-159">x &lt;= 5</label>
+		</location>
+		<location id="id2" x="-102" y="-119">
+			<name x="-102" y="-139">coffee_0</name>
+		</location>
+		<location id="id3" x="-374" y="181">
+		</location>
+		<location id="id4" x="-238" y="181">
+			<label kind="invariant" x="-238" y="141">x &lt;= 5</label>
+		</location>
+		<location id="id5" x="-102" y="181">
+			<name x="-102" y="161">coffee_1</name>
+		</location>
+		<location id="id6" x="-374" y="481">
+		</location>
+		<location id="id7" x="-238" y="481">
+			<label kind="invariant" x="-238" y="441">x &lt;= 5</label>
+		</location>
+		<location id="id8" x="-102" y="481">
+			<name x="-102" y="461">coffee_2</name>
+		</location>
+		<location id="id9" x="-374" y="734">
+		</location>
+		<location id="id10" x="-238" y="734">
+			<label kind="invariant" x="-238" y="694">x &lt;= 5</label>
+		</location>
+		<location id="id11" x="-102" y="734">
+			<name x="-102" y="714">coffee_3</name>
+		</location>
+		<init ref="id0"/>
+		<transition>
+			<source ref="id2"/>
+			<target ref="id3"/>
+			<label kind="synchronisation" x="-255" y="-13">wait!</label>
+			<nail x="-255" y="17"/>
+		</transition>
+		<transition>
+			<source ref="id5"/>
+			<target ref="id6"/>
+			<label kind="synchronisation" x="-255" y="287">wait!</label>
+			<nail x="-255" y="317"/>
+		</transition>
+		<transition>
+			<source ref="id8"/>
+			<target ref="id9"/>
+			<label kind="synchronisation" x="-255" y="587">wait!</label>
+			<nail x="-255" y="617"/>
+		</transition>
+		<transition>
+			<source ref="id11"/>
+			<target ref="id9"/>
+			<label kind="synchronisation" x="-255" y="-54">wait!</label>
+			<nail x="-255" y="23"/>
+		</transition>
+		<transition>
+			<source ref="id0"/>
+			<target ref="id3"/>
+			<label kind="synchronisation" x="-382" y="-227">wait!</label>
+			<nail x="-382" y="-150"/>
+		</transition>
+		<transition>
+			<source ref="id3"/>
+			<target ref="id6"/>
+			<label kind="synchronisation" x="-382" y="83">wait!</label>
+			<nail x="-382" y="113"/>
+		</transition>
+		<transition>
+			<source ref="id6"/>
+			<target ref="id9"/>
+			<label kind="synchronisation" x="-382" y="383">wait!</label>
+			<nail x="-382" y="413"/>
+		</transition>
+		<transition>
+			<source ref="id9"/>
+			<target ref="id9"/>
+			<label kind="synchronisation" x="-382" y="-221">wait!</label>
+			<nail x="-382" y="-144"/>
+		</transition>
+		<transition>
+			<source ref="id1"/>
+			<target ref="id5"/>
+			<label kind="guard" x="-187" y="-110">x == 5</label>
+			<label kind="synchronisation" x="-187" y="-140">wait!</label>
+			<nail x="-187" y="-110"/>
+		</transition>
+		<transition>
+			<source ref="id4"/>
+			<target ref="id8"/>
+			<label kind="guard" x="-187" y="190">x == 5</label>
+			<label kind="synchronisation" x="-187" y="160">wait!</label>
+			<nail x="-187" y="190"/>
+		</transition>
+		<transition>
+			<source ref="id7"/>
+			<target ref="id11"/>
+			<label kind="guard" x="-187" y="490">x == 5</label>
+			<label kind="synchronisation" x="-187" y="460">wait!</label>
+			<nail x="-187" y="490"/>
+		</transition>
+		<transition>
+			<source ref="id10"/>
+			<target ref="id11"/>
+			<label kind="guard" x="-187" y="-151">x == 5</label>
+			<label kind="synchronisation" x="-187" y="-181">wait!</label>
+			<nail x="-187" y="-104"/>
+		</transition>
+		<transition>
+			<source ref="id1"/>
+			<target ref="id5"/>
+			<label kind="guard" x="-187" y="-178">x == 5</label>
+			<label kind="synchronisation" x="-187" y="-171">push!</label>
+			<nail x="-187" y="-141"/>
+		</transition>
+		<transition>
+			<source ref="id4"/>
+			<target ref="id8"/>
+			<label kind="guard" x="-187" y="122">x == 5</label>
+			<label kind="synchronisation" x="-187" y="92">push!</label>
+			<nail x="-187" y="122"/>
+		</transition>
+		<transition>
+			<source ref="id7"/>
+			<target ref="id11"/>
+			<label kind="guard" x="-187" y="422">x == 5</label>
+			<label kind="synchronisation" x="-187" y="392">push!</label>
+			<nail x="-187" y="422"/>
+		</transition>
+		<transition>
+			<source ref="id10"/>
+			<target ref="id11"/>
+			<label kind="guard" x="-187" y="-182">x == 5</label>
+			<label kind="synchronisation" x="-187" y="-212">push!</label>
+			<nail x="-187" y="-135"/>
+		</transition>
+		<transition>
+			<source ref="id1"/>
+			<target ref="id4"/>
+			<label kind="guard" x="-229" y="-150">x &lt; 5</label>
+			<label kind="synchronisation" x="-229" y="-180">wait!</label>
+			<nail x="-229" y="-150"/>
+		</transition>
+		<transition>
+			<source ref="id4"/>
+			<target ref="id7"/>
+			<label kind="guard" x="-229" y="113">x &lt; 5</label>
+			<label kind="synchronisation" x="-229" y="83">wait!</label>
+			<nail x="-229" y="113"/>
+		</transition>
+		<transition>
+			<source ref="id7"/>
+			<target ref="id10"/>
+			<label kind="guard" x="-229" y="413">x &lt; 5</label>
+			<label kind="synchronisation" x="-229" y="383">wait!</label>
+			<nail x="-229" y="413"/>
+		</transition>
+		<transition>
+			<source ref="id10"/>
+			<target ref="id10"/>
+			<label kind="guard" x="-229" y="-191">x &lt; 5</label>
+			<label kind="synchronisation" x="-229" y="-221">wait!</label>
+			<nail x="-229" y="-144"/>
+		</transition>
+		<transition>
+			<source ref="id1"/>
+			<target ref="id4"/>
+			<label kind="guard" x="-297" y="-150">x &lt; 5</label>
+			<label kind="synchronisation" x="-297" y="-180">push!</label>
+			<nail x="-297" y="-150"/>
+		</transition>
+		<transition>
+			<source ref="id4"/>
+			<target ref="id7"/>
+			<label kind="guard" x="-297" y="113">x &lt; 5</label>
+			<label kind="synchronisation" x="-297" y="83">push!</label>
+			<nail x="-297" y="113"/>
+		</transition>
+		<transition>
+			<source ref="id7"/>
+			<target ref="id10"/>
+			<label kind="guard" x="-297" y="413">x &lt; 5</label>
+			<label kind="synchronisation" x="-297" y="383">push!</label>
+			<nail x="-297" y="413"/>
+		</transition>
+		<transition>
+			<source ref="id10"/>
+			<target ref="id10"/>
+			<label kind="guard" x="-297" y="-191">x &lt; 5</label>
+			<label kind="synchronisation" x="-297" y="-221">push!</label>
+			<nail x="-297" y="-144"/>
+		</transition>
+		<transition>
+			<source ref="id2"/>
+			<target ref="id3"/>
+			<label kind="synchronisation" x="-255" y="-89">push!</label>
+			<nail x="-255" y="-59"/>
+		</transition>
+		<transition>
+			<source ref="id5"/>
+			<target ref="id6"/>
+			<label kind="synchronisation" x="-255" y="211">push!</label>
+			<nail x="-255" y="241"/>
+		</transition>
+		<transition>
+			<source ref="id8"/>
+			<target ref="id9"/>
+			<label kind="synchronisation" x="-255" y="511">push!</label>
+			<nail x="-255" y="541"/>
+		</transition>
+		<transition>
+			<source ref="id11"/>
+			<target ref="id9"/>
+			<label kind="synchronisation" x="-255" y="-130">push!</label>
+			<nail x="-255" y="-53"/>
+		</transition>
+		<transition>
+			<source ref="id0"/>
+			<target ref="id4"/>
+			<label kind="synchronisation" x="-331" y="-174">push!</label>
+			<label kind="assignment" x="-331" y="-167">x := 0</label>
+		</transition>
+		<transition>
+			<source ref="id3"/>
+			<target ref="id7"/>
+			<label kind="synchronisation" x="-331" y="126">push!</label>
+			<label kind="assignment" x="-331" y="96">x := 0</label>
+		</transition>
+		<transition>
+			<source ref="id6"/>
+			<target ref="id10"/>
+			<label kind="synchronisation" x="-331" y="426">push!</label>
+			<label kind="assignment" x="-331" y="396">x := 0</label>
+		</transition>
+		<transition>
+			<source ref="id9"/>
+			<target ref="id10"/>
+			<label kind="synchronisation" x="-331" y="-178">push!</label>
+			<label kind="assignment" x="-331" y="-208">x := 0</label>
+		</transition>
+		<transition>
+			<source ref="id0"/>
+			<target ref="id4"/>
+			<label kind="synchronisation" x="-366" y="16">wait</label>
+			<label kind="assignment" x="-366" y="31">x := 0</label>
+		</transition>
+		<transition>
+			<source ref="id0"/>
+			<target ref="id4"/>
+			<label kind="synchronisation" x="-366" y="16">push</label>
+			<label kind="assignment" x="-366" y="31">x := 0</label>
+		</transition>
+		<transition>
+			<source ref="id0"/>
+			<target ref="id4"/>
+			<label kind="assignment" x="-366" y="31">x := 0</label>
+		</transition>
+		<transition>
+			<source ref="id1"/>
+			<target ref="id4"/>
+			<label kind="synchronisation" x="-298" y="16">wait</label>
+			<label kind="assignment" x="-298" y="31">x := 0</label>
+		</transition>
+		<transition>
+			<source ref="id1"/>
+			<target ref="id4"/>
+			<label kind="synchronisation" x="-298" y="16">push</label>
+			<label kind="assignment" x="-298" y="31">x := 0</label>
+		</transition>
+		<transition>
+			<source ref="id1"/>
+			<target ref="id4"/>
+			<label kind="assignment" x="-298" y="31">x := 0</label>
+		</transition>
+		<transition>
+			<source ref="id2"/>
+			<target ref="id4"/>
+			<label kind="synchronisation" x="-230" y="16">wait</label>
+			<label kind="assignment" x="-230" y="31">x := 0</label>
+		</transition>
+		<transition>
+			<source ref="id2"/>
+			<target ref="id4"/>
+			<label kind="synchronisation" x="-230" y="16">push</label>
+			<label kind="assignment" x="-230" y="31">x := 0</label>
+		</transition>
+		<transition>
+			<source ref="id2"/>
+			<target ref="id4"/>
+			<label kind="assignment" x="-230" y="31">x := 0</label>
+		</transition>
+		<transition>
+			<source ref="id3"/>
+			<target ref="id8"/>
+			<label kind="synchronisation" x="-298" y="316">wait</label>
+			<label kind="assignment" x="-298" y="331">x := 5</label>
+		</transition>
+		<transition>
+			<source ref="id3"/>
+			<target ref="id8"/>
+			<label kind="synchronisation" x="-298" y="316">push</label>
+			<label kind="assignment" x="-298" y="331">x := 5</label>
+		</transition>
+		<transition>
+			<source ref="id3"/>
+			<target ref="id8"/>
+			<label kind="assignment" x="-298" y="331">x := 5</label>
+		</transition>
+		<transition>
+			<source ref="id4"/>
+			<target ref="id8"/>
+			<label kind="synchronisation" x="-230" y="316">wait</label>
+			<label kind="assignment" x="-230" y="331">x := 5</label>
+		</transition>
+		<transition>
+			<source ref="id4"/>
+			<target ref="id8"/>
+			<label kind="synchronisation" x="-230" y="316">push</label>
+			<label kind="assignment" x="-230" y="331">x := 5</label>
+		</transition>
+		<transition>
+			<source ref="id4"/>
+			<target ref="id8"/>
+			<label kind="assignment" x="-230" y="331">x := 5</label>
+		</transition>
+		<transition>
+			<source ref="id5"/>
+			<target ref="id8"/>
+			<label kind="synchronisation" x="-162" y="316">wait</label>
+			<label kind="assignment" x="-162" y="331">x := 5</label>
+		</transition>
+		<transition>
+			<source ref="id5"/>
+			<target ref="id8"/>
+			<label kind="synchronisation" x="-162" y="316">push</label>
+			<label kind="assignment" x="-162" y="331">x := 5</label>
+		</transition>
+		<transition>
+			<source ref="id5"/>
+			<target ref="id8"/>
+			<label kind="assignment" x="-162" y="331">x := 5</label>
+		</transition>
+		<transition>
+			<source ref="id6"/>
+			<target ref="id9"/>
+			<label kind="synchronisation" x="-434" y="616">wait</label>
+			<label kind="assignment" x="-434" y="631">x := 10</label>
+		</transition>
+		<transition>
+			<source ref="id6"/>
+			<target ref="id9"/>
+			<label kind="synchronisation" x="-434" y="616">push</label>
+			<label kind="assignment" x="-434" y="631">x := 10</label>
+		</transition>
+		<transition>
+			<source ref="id6"/>
+			<target ref="id9"/>
+			<label kind="assignment" x="-434" y="631">x := 10</label>
+		</transition>
+		<transition>
+			<source ref="id7"/>
+			<target ref="id9"/>
+			<label kind="synchronisation" x="-366" y="616">wait</label>
+			<label kind="assignment" x="-366" y="631">x := 10</label>
+		</transition>
+		<transition>
+			<source ref="id7"/>
+			<target ref="id9"/>
+			<label kind="synchronisation" x="-366" y="616">push</label>
+			<label kind="assignment" x="-366" y="631">x := 10</label>
+		</transition>
+		<transition>
+			<source ref="id7"/>
+			<target ref="id9"/>
+			<label kind="assignment" x="-366" y="631">x := 10</label>
+		</transition>
+		<transition>
+			<source ref="id8"/>
+			<target ref="id9"/>
+			<label kind="synchronisation" x="-298" y="616">wait</label>
+			<label kind="assignment" x="-298" y="631">x := 10</label>
+		</transition>
+		<transition>
+			<source ref="id8"/>
+			<target ref="id9"/>
+			<label kind="synchronisation" x="-298" y="616">push</label>
+			<label kind="assignment" x="-298" y="631">x := 10</label>
+		</transition>
+		<transition>
+			<source ref="id8"/>
+			<target ref="id9"/>
+			<label kind="assignment" x="-298" y="631">x := 10</label>
+		</transition>
+	</template>
+	<system></system>
+	<queries>
+		<query>
+			<formula></formula>
+			<comment></comment>
+		</query>
+	</queries>
+</nta>

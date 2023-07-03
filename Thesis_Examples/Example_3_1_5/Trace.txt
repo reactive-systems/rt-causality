@@ -1,0 +1,3 @@
+Lasso delay trace: 
+Prefix part: <4, a!> 
+Lasso part: <2, b!> <3, b!>
