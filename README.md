@@ -58,6 +58,10 @@ We refer also to the multiple examples for more details on the possible input fo
 
 We represent only the concrete actions and delays of a run (i.e., its trace). We can handle delay traces, delay lasso traces, and timestamp traces as well as the corresponding sets of events. See the traces and causes in <em>Example_3_1_5</em> and <em>Example_3_2_3</em> for more details on the input format. 
 
+## Related Paper
+"Counterfactual Explanations for MITL Violations". Bernd Finkbeiner, Felix Jahn, and Julian Siber. FSTTCS 2024.
 
 ## About the Project
-The tool was developed in the course of the master's project on "Counterfactual Causality in Real-Time Systems" by Felix Jahn, advised by Julian Siber, and supervised by Prof. Bernd Finkbeiner, Ph.D. at Saarland University. Causes are checked and computed relying on the formal notions of causality in real-time systems developed in this thesis. 
+The tool was orignally developed in the course of the master's project on "Counterfactual Causality in Real-Time Systems" by Felix Jahn, advised by Julian Siber, and supervised by Prof. Bernd Finkbeiner, Ph.D. at Saarland University. Causes are checked and computed relying on the formal notions of causality in real-time systems developed in this thesis. 
+
+
